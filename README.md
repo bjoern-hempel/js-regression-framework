@@ -21,4 +21,3 @@ This tutorial is licensed under the MIT License - see the [LICENSE.md](/LICENSE.
 ## C. Closing words
 
 Have fun! :)
-
