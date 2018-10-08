@@ -8,7 +8,28 @@ Coming soon..
 
 ## 1. Usage
 
-Coming soon..
+### 1.1 Linear regression
+
+```javascript
+var regression = Regression.linear();
+
+regression.addRecord(20,  0);
+regression.addRecord(16,  3);
+regression.addRecord(15,  7);
+regression.addRecord(16,  4);
+regression.addRecord(13,  6);
+regression.addRecord(10, 10);
+
+var mn = regression.calculate();
+
+console.log(String('y(x) = %s * x + %s').replace(/%s/, mn.m).replace(/%s/, mn.n));
+```
+
+**It returns:**
+
+```javascript
+y(x) = -0.9821428571428571 * x + 19.732142857142854
+```
 
 ## A. Authors
 
