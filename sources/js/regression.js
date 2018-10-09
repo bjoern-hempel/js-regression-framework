@@ -2,7 +2,7 @@
  * A class to classify data structures (calculate regression).
  *
  * @author Björn Hempel <bjoern@hempel.li>
- * @version 1.0 (2018-08-31)
+ * @version 1.0 (2018-10-08)
  */
 class RegressionBase {
 
