@@ -8,7 +8,7 @@ Coming soon..
 
 ## 1. Usage
 
-### 1.1 Linear regression
+### 1.1 Linear regression (2D)
 
 ```javascript
 var regression = Regression.linear();
