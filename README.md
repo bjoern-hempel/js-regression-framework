@@ -1,10 +1,10 @@
 # A Javascript regression framework
 
-This is a javascript regression framework.
+This is a javascript regression analysis framework.
 
 ## 0. Introduction
 
-Coming soon..
+Regression analysis is a statistical analysis technique that aims to model relationships between a dependent variable and one or more independent variables.
 
 ## 1. Usage
 
