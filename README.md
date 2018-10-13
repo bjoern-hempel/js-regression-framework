@@ -10,6 +10,8 @@ Regression analysis is a statistical analysis technique that aims to model relat
 
 ### 1.1 Linear regression (2D)
 
+Linear regression in 2-dimensional space, which is a special case of the general concept of regression analysis, is a statistical method that attempts to explain an observed dependent variable by one or more independent variables.
+
 ```javascript
 var regression = Regression.linear();
 
