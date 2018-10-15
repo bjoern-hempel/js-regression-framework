@@ -134,6 +134,40 @@ class RegressionPolynomial extends RegressionBase {
 }
 
 /**
+ * A class to calculate logistic regressions.
+ *
+ * @author Björn Hempel <bjoern@hempel.li>
+ * @version 1.0 (2018-10-15)
+ */
+class RegressionLogistic extends RegressionBase {
+
+    /**
+     * The constructor of this class.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     */
+    constructor() {
+        super();
+
+        this.name = 'RegressionLogistic';
+    }
+
+    /**
+     * Calculates the logistic regression.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     * @returns {{m: number, n: number}}
+     */
+    calculate() {
+        /* Todo */
+
+        return {};
+    }
+}
+
+/**
  * A class to classify data structures (Regression factory).
  *
  * @author Björn Hempel <bjoern@hempel.li>
@@ -161,5 +195,16 @@ var Regression = {
      */
     polynomial: function () {
         return new RegressionPolynomial();
+    }
+
+    /**
+     * Logistic regression.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-15)
+     * @returns {RegressionLogistic}
+     */
+    logistic: function () {
+        return new RegressionLogistic();
     }
 };
