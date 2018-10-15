@@ -100,6 +100,40 @@ class RegressionLinear extends RegressionBase {
 }
 
 /**
+ * A class to calculate polynomial regressions.
+ *
+ * @author Björn Hempel <bjoern@hempel.li>
+ * @version 1.0 (2018-10-15)
+ */
+class RegressionPolynomial extends RegressionBase {
+
+    /**
+     * The constructor of this class.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     */
+    constructor() {
+        super();
+
+        this.name = 'RegressionPolynomial';
+    }
+
+    /**
+     * Calculates the regression.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     * @returns {{m: number, n: number}}
+     */
+    calculate() {
+        /* Todo */
+
+        return {};
+    }
+}
+
+/**
  * A class to classify data structures (Regression factory).
  *
  * @author Björn Hempel <bjoern@hempel.li>
@@ -108,7 +142,7 @@ class RegressionLinear extends RegressionBase {
 var Regression = {
 
     /**
-     * Linear Regression.
+     * Linear regression.
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-08)
@@ -116,5 +150,16 @@ var Regression = {
      */
     linear: function () {
         return new RegressionLinear();
+    }
+
+    /**
+     * Polynomial regression.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-15)
+     * @returns {RegressionPolynomial}
+     */
+    polynomial: function () {
+        return new RegressionPolynomial();
     }
 };
