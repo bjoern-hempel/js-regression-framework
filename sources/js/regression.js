@@ -11,7 +11,7 @@ class RegressionBase {
      * Creates a new environment for regression class.
      *
      * @author Björn Hempel <bjoern@hempel.li>
-     * @version 1.0 (2018-08-31)
+     * @version 1.0 (2018-10-08)
      */
     constructor() {
         this.name = 'RegressionBase';
@@ -62,10 +62,10 @@ class RegressionBase {
 }
 
 /**
- * A class to calculate regressions.
+ * A class to calculate linear regressions.
  *
  * @author Björn Hempel <bjoern@hempel.li>
- * @version 1.0 (2018-08-31)
+ * @version 1.0 (2018-10-08)
  */
 class RegressionLinear extends RegressionBase {
 
