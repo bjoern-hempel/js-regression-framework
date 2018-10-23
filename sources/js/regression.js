@@ -93,9 +93,9 @@ class RegressionLinear extends RegressionBase {
         var y_mean = this.y_sum / this.count;
 
         var m = (this.xy_sum - this.count * x_mean * y_mean) / (this.x_2_sum - this.count * Math.pow(x_mean, 2));
-        var n = y_mean - m * x_mean;
+        var b = y_mean - m * x_mean;
 
-        return {m: m, n: n};
+        return {m: m, b: b};
     }
 }
 
@@ -184,7 +184,7 @@ var Regression = {
      */
     linear: function () {
         return new RegressionLinear();
-    }
+    },
 
     /**
      * Polynomial regression.
@@ -195,7 +195,7 @@ var Regression = {
      */
     polynomial: function () {
         return new RegressionPolynomial();
-    }
+    },
 
     /**
      * Logistic regression.
