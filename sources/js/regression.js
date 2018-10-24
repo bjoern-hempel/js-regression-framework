@@ -60,7 +60,30 @@ class RegressionBase {
      * @returns {{m: number, n: number}}
      */
     calculate() {
-        console.error(String('Do not use this class directory (%s)').replace(/%s/, this.name));
+        console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
+    }
+
+    /**
+     * Calculate function.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     * @param x
+     * @returns {number}
+     */
+    calculateFunction(x) {
+        console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
+    }
+
+    /**
+     * Calculates the Score: R²
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-24)
+     * @returns {number}
+     */
+    calculateScore() {
+        console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
     }
 }
 
@@ -110,6 +133,14 @@ class RegressionLinear extends RegressionBase {
         };
     }
 
+    /**
+     * Calculate function.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-08)
+     * @param x
+     * @returns {number}
+     */
     calculateFunction(x) {
         return this.m * x + this.b;
     }
