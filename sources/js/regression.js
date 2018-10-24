@@ -31,6 +31,8 @@ class RegressionBase {
         this.x_2_sum = 0;
         this.xy_sum  = 0;
         this.count   = 0;
+
+        this.points = [];
     }
 
     /**
@@ -47,6 +49,7 @@ class RegressionBase {
         this.x_2_sum += Math.pow(x, 2);
         this.xy_sum  += x * y;
         this.count++;
+        this.points.push({x: x, y: y});
     }
 
     /**
@@ -79,6 +82,12 @@ class RegressionLinear extends RegressionBase {
         super();
 
         this.name = 'RegressionLinear';
+
+        this.x_mean = 0;
+        this.y_mean = 0;
+
+        this.m = 0;
+        this.b = 0;
     }
 
     /**
@@ -89,13 +98,39 @@ class RegressionLinear extends RegressionBase {
      * @returns {{m: number, n: number}}
      */
     calculate() {
-        var x_mean = this.x_sum / this.count;
-        var y_mean = this.y_sum / this.count;
+        this.x_mean = this.x_sum / this.count;
+        this.y_mean = this.y_sum / this.count;
 
-        var m = (this.xy_sum - this.count * x_mean * y_mean) / (this.x_2_sum - this.count * Math.pow(x_mean, 2));
-        var b = y_mean - m * x_mean;
+        this.m = (this.xy_sum - this.count * this.x_mean * this.y_mean) / (this.x_2_sum - this.count * Math.pow(this.x_mean, 2));
+        this.b = this.y_mean - this.m * this.x_mean;
 
-        return {m: m, b: b};
+        return {
+            m: this.m,
+            b: this.b
+        };
+    }
+
+    calculateFunction(x) {
+        return this.m * x + this.b;
+    }
+
+    /**
+     * Calculates the Score: R²
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-24)
+     * @returns {number}
+     */
+    calculateScore() {
+        var numerator   = 0;
+        var denominator = 0;
+
+        for (var i = 0; i < this.points.length; i++) {
+            numerator   += Math.pow(this.points[i].y - this.calculateFunction(this.points[i].x), 2);
+            denominator += Math.pow(this.points[i].y - this.y_mean, 2);
+        }
+
+        return 1 - numerator / denominator;
     }
 }
 
