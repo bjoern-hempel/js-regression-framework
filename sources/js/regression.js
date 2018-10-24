@@ -95,6 +95,10 @@ class RegressionBase {
  */
 class RegressionLinear extends RegressionBase {
 
+    static get SUCCESS_CALCULATE() {
+        return [new JsTestException(201, 'Calculate linear regression test'), this];
+    }
+
     /**
      * The constructor of this class.
      *
