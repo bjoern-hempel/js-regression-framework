@@ -13,13 +13,15 @@ function startLinearRegressionTest() {
             regression.addRecord(13,  6);
             regression.addRecord(10, 10);
 
-            var mb    = regression.calculate();
-            var score = regression.calculateScore();
-            var y     = regression.calculateFunction(20);
+            var result = regression.calculate();
+            var score  = regression.calculateScore();
+
+            var x = 20;
+            var y = regression.calculateFunction(x);
 
             return (
-                JsTest.equalNumber(mb.m, -0.9821, 3),
-                JsTest.equalNumber(mb.b, 19.7321, 3),
+                JsTest.equalNumber(result.coef, -0.9821, 3),
+                JsTest.equalNumber(result.intercept, 19.7321, 3),
                 JsTest.equalNumber(score, 0.9003, 3),
                 JsTest.equalNumber(y, 0.0893, 3)
             );

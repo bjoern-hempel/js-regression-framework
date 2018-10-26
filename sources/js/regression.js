@@ -57,7 +57,7 @@ class RegressionBase {
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-08)
-     * @returns {{m: number, n: number}}
+     * @returns {{coef: number, n: number}}
      */
     calculate() {
         console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
@@ -113,8 +113,8 @@ class RegressionLinear extends RegressionBase {
         this.x_mean = 0;
         this.y_mean = 0;
 
-        this.m = 0;
-        this.b = 0;
+        this.coef      = 0;
+        this.intercept = 0;
     }
 
     /**
@@ -122,18 +122,18 @@ class RegressionLinear extends RegressionBase {
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-08)
-     * @returns {{m: number, n: number}}
+     * @returns {{coef: number, n: number}}
      */
     calculate() {
         this.x_mean = this.x_sum / this.count;
         this.y_mean = this.y_sum / this.count;
 
-        this.m = (this.xy_sum - this.count * this.x_mean * this.y_mean) / (this.x_2_sum - this.count * Math.pow(this.x_mean, 2));
-        this.b = this.y_mean - this.m * this.x_mean;
+        this.coef      = (this.xy_sum - this.count * this.x_mean * this.y_mean) / (this.x_2_sum - this.count * Math.pow(this.x_mean, 2));
+        this.intercept = this.y_mean - this.coef * this.x_mean;
 
         return {
-            m: this.m,
-            b: this.b
+            coef:      this.coef,
+            intercept: this.intercept
         };
     }
 
@@ -146,7 +146,7 @@ class RegressionLinear extends RegressionBase {
      * @returns {number}
      */
     calculateFunction(x) {
-        return this.m * x + this.b;
+        return this.coef * x + this.intercept;
     }
 
     /**
@@ -194,7 +194,7 @@ class RegressionPolynomial extends RegressionBase {
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-08)
-     * @returns {{m: number, n: number}}
+     * @returns {{coef: number, n: number}}
      */
     calculate() {
         /* Todo */
@@ -228,7 +228,7 @@ class RegressionLogistic extends RegressionBase {
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-08)
-     * @returns {{m: number, n: number}}
+     * @returns {{coef: number, n: number}}
      */
     calculate() {
         /* Todo */

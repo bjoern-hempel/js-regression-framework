@@ -17,10 +17,10 @@
         regression.addRecord(13,  6);
         regression.addRecord(10, 10);
 
-        var mb    = regression.calculate();
-        var score = regression.calculateScore();
+        var result = regression.calculate();
+        var score  = regression.calculateScore();
 
-        console.log(String('y(x) = %s * x + %s').replace(/%s/, mb.m).replace(/%s/, mb.b));
+        console.log(String('y(x) = %s * x + %s').replace(/%s/, result.coef).replace(/%s/, result.intercept));
         console.log('y(x) = -0.9821428571428571 * x + 19.732142857142854');
 
         console.log('R² = ' + score);
