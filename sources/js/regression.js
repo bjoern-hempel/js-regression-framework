@@ -85,6 +85,17 @@ class RegressionBase {
     calculateScore() {
         console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
     }
+
+
+    /**
+     * Get the equation string.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-27)
+     */
+    getEquationString() {
+        console.error(String('Do not use this class directly (%s)').replace(/%s/, this.name));
+    }
 }
 
 /**
@@ -169,7 +180,7 @@ class RegressionLinear extends RegressionBase {
     }
 
     /**
-     * Prints the equation.
+     * Get the equation string.
      *
      * @author Björn Hempel <bjoern@hempel.li>
      * @version 1.0 (2018-10-27)
