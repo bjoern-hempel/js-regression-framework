@@ -167,6 +167,16 @@ class RegressionLinear extends RegressionBase {
 
         return 1 - numerator / denominator;
     }
+
+    /**
+     * Prints the equation.
+     *
+     * @author Björn Hempel <bjoern@hempel.li>
+     * @version 1.0 (2018-10-27)
+     */
+    getEquationString() {
+        return String('y(x) = %s * x + %s').replace(/%s/, this.coef).replace(/%s/, this.intercept);
+    }
 }
 
 /**
