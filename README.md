@@ -6,9 +6,19 @@ This is a javascript regression analysis framework.
 
 Regression analysis is a statistical analysis technique that aims to model relationships between a dependent variable and one or more independent variables.
 
-## 1. Usage
 
-### 1.1 Linear regression (2D)
+
+
+
+## 1. Linear regression (2D)
+
+### 1.1 Preliminary considerations
+
+#### 1.1.2 Calculation of the slope m
+
+<img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=m%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28x_i-%5Coverline%7Bx%7D%29%28y_i-%5Coverline%7By%7D%29%7D%7B%5Csum_%7Bi%3D1%7D%5En%28x_i-%5Coverline%7Bx%7D%29%5E2%7D" width="253" alt="m = \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}">
+
+### 1.2 Usage
 
 Linear regression in 2-dimensional space, which is a special case of the general concept of regression analysis, is a statistical method that attempts to explain an observed dependent variable by one or more independent variables.
 
