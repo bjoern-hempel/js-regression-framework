@@ -22,6 +22,10 @@ Regression analysis is a statistical analysis technique that aims to model relat
 
 <img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=b%20%3D%20%5Coverline%7By%7D-m%20%5Ccdot%20%5Coverline%7Bx%7D" width="129" alt="b = \overline{y}-m \cdot \overline{x}">
 
+#### 1.1.3 Calculation of the scope R<sup>2</sup>
+
+<img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=R%5E2%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Chat%7By%7D%29%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Coverline%7By%7D%29%5E2%7D" width="233" alt="R^2 = 1 - \frac{\sum_{i=1}^n(y_i-\hat{y})^2}{\sum_{i=1}^n(y_i-\overline{y})^2}">
+
 ### 1.2 Usage
 
 Linear regression in 2-dimensional space, which is a special case of the general concept of regression analysis, is a statistical method that attempts to explain an observed dependent variable by one or more independent variables.
