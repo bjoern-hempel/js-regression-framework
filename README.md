@@ -24,7 +24,7 @@ Regression analysis is a statistical analysis technique that aims to model relat
 
 #### 1.1.3 Calculation of the scope R<sup>2</sup>
 
-<img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=R%5E2%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Chat%7By%7D%29%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Coverline%7By%7D%29%5E2%7D" width="233" alt="R^2 = 1 - \frac{\sum_{i=1}^n(y_i-\hat{y})^2}{\sum_{i=1}^n(y_i-\overline{y})^2}">
+<img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=R%5E2%20%3D%201%20-%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Chat%7By%7D_i%29%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Coverline%7By%7D%29%5E2%7D" width="239" alt="R^2 = 1 - \frac{\sum_{i=1}^n(y_i-\hat{y}_i)^2}{\sum_{i=1}^n(y_i-\overline{y})^2}">
 
 ### 1.2 Usage
 
