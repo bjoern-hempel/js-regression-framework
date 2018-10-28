@@ -14,9 +14,13 @@ Regression analysis is a statistical analysis technique that aims to model relat
 
 ### 1.1 Preliminary considerations
 
-#### 1.1.2 Calculation of the slope m
+#### 1.1.1 Calculation of the slope m
 
 <img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=m%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28x_i-%5Coverline%7Bx%7D%29%28y_i-%5Coverline%7By%7D%29%7D%7B%5Csum_%7Bi%3D1%7D%5En%28x_i-%5Coverline%7Bx%7D%29%5E2%7D" width="253" alt="m = \frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n(x_i-\overline{x})^2}">
+
+#### 1.1.2 Calculation of the intercept b
+
+<img src="https://latex.ixno.de/?r=300&p=1pt&c=1&f=b%20%3D%20%5Coverline%7By%7D-m%20%5Ccdot%20%5Coverline%7Bx%7D" width="129" alt="b = \overline{y}-m \cdot \overline{x}">
 
 ### 1.2 Usage
 
