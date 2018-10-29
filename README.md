@@ -6,11 +6,9 @@ This is a javascript regression analysis framework.
 
 Regression analysis is a statistical analysis technique that aims to model relationships between a dependent variable and one or more independent variables.
 
-
-
-
-
 ## 1. Linear regression (2D)
+
+Linear regression, which is a special case of the general concept of regression analysis, is a statistical technique that attempts to explain an observed dependent variable by one or more independent variables.
 
 ### 1.1 Preliminary considerations
 
