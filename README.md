@@ -2,13 +2,16 @@
 
 This is a javascript regression analysis framework.
 
+
 ## 0. Introduction
 
 Regression analysis is a statistical analysis technique that aims to model relationships between a dependent variable and one or more independent variables.
 
+
 ## 1. Linear regression (2D)
 
 Linear regression, which is a special case of the general concept of regression analysis, is a statistical technique that attempts to explain an observed dependent variable by one or more independent variables.
+
 
 ### 1.1 Preliminary considerations
 
@@ -49,13 +52,16 @@ console.log(String('y(x) = %s * x + %s').replace(/%s/, mn.m).replace(/%s/, mn.n)
 y(x) = -0.9821428571428571 * x + 19.732142857142854
 ```
 
+
 ## A. Authors
 
 * Björn Hempel <bjoern@hempel.li> - _Initial work_ - [https://github.com/bjoern-hempel](https://github.com/bjoern-hempel)
 
+
 ## B. Licence
 
 This tutorial is licensed under the MIT License - see the [LICENSE.md](/LICENSE.md) file for details
+
 
 ## C. Closing words
 
